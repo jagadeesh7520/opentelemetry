@@ -9,7 +9,7 @@ OpenTelemetry is the Second best Project in CNCF Landscape after Kubernetes!
 
 </aside>
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/84ad6f6a-681d-4a55-a9be-d328db326720/6d7a11a8-99df-42a9-bff2-21cade1459bf/d68a88b2-913d-4ff3-b602-d2ccf8016dcb.png)
+
 
 Architecture Diagram
 
@@ -27,7 +27,6 @@ Create EC2 instance with the following configurations:
 - T2.xlarge (More than 6GB ram required)
 - 15GB storage
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/84ad6f6a-681d-4a55-a9be-d328db326720/1349b234-1681-47c3-ae44-fa4e4f91f1aa/image.png)
 
 ### Clone the repo:
 
@@ -55,7 +54,6 @@ https://github.com/open-telemetry/opentelemetry-demo/blob/main/docker-compose.ym
 
 ### Service Details:
 
-![Microservices in the app and the languages they are written in.](https://prod-files-secure.s3.us-west-2.amazonaws.com/84ad6f6a-681d-4a55-a9be-d328db326720/bb840da6-b8f5-44b7-8487-be4dd72f1aa9/image.png)
 
 Microservices in the app and the languages they are written in.
 
@@ -91,7 +89,6 @@ We can also check how the OTEL variables are being passed as environment variabl
 
 ## Otel Collector
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/84ad6f6a-681d-4a55-a9be-d328db326720/57d1a232-1310-4dec-9866-8ee570507c87/image.png)
 
 **Receivers:** Collect telemetry data (traces, metrics, logs) from various sources (e.g., applications, services, or endpoints).
 
@@ -245,7 +242,6 @@ sudo docker compose up --force-recreate --remove-orphans --detach
 
 </aside>
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/84ad6f6a-681d-4a55-a9be-d328db326720/bc3852e1-d61a-4ce2-a652-ec3235041409/image.png)
 
 Once all the containers are started, we can see the access them:
 
@@ -254,9 +250,6 @@ Once all the containers are started, we can see the access them:
 - Load Generator UI: [http://IP:8080/loadgen/](http://localhost:8080/loadgen/)
 - Jaeger UI: [http://IP:8080/jaeger/ui/](http://localhost:8080/jaeger/ui/)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/84ad6f6a-681d-4a55-a9be-d328db326720/d3e122b3-a14a-4f90-84be-c1286f8a83fc/image.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/84ad6f6a-681d-4a55-a9be-d328db326720/5e941ce9-9318-41c6-a256-d62e7f89b736/image.png)
 
 ## Feature Flags
 
@@ -265,15 +258,13 @@ https://opentelemetry.io/docs/demo/feature-flags/
 
 Flag values are stored in the `src/flagd/demo.flagd.json` file. To enable a flag, change the `defaultVariant` value in the config file for a given flag to “on”.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/84ad6f6a-681d-4a55-a9be-d328db326720/d2c52040-b68f-4d64-91c1-e424882b7e01/7d132b2c-58a3-44d8-b6e2-e0a1431300cc.png)
 
 ## **View and Analyse with the Jaeger UI**
 
 With the `adServcieFailure` feature flag enabled, let’s see how we can use [**Jaeger](https://www.jaegertracing.io/)** to diagnose the issue to determine the root cause. ****Remember, that the service will ***generate an error for GetAds 1/10th of the time.***
 
 > Jaeger is usually the first tool you get in contact with when you start getting into the world of Distributed Tracing. With Jaeger, we can visualise the whole chain of events. With this visibility we can easier isolate the problem when something goes wrong.
-> 
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/84ad6f6a-681d-4a55-a9be-d328db326720/6c4acfdf-a838-498d-a146-0cf7fdcfb869/image.png)
 
 ## **Metrics on Grafana**
+
